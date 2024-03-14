@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classe Aluno em HTML</title>
+</head>
+<body>
+    <script>
+        function Aluno(nome, idade, peso) {
+            this.nome = nome;
+            this.idade = idade;
+            this.peso = peso;
+        }
+
+        Aluno.prototype.toString = function() {
+            return `Aluno{nome: '${this.nome}', idade: ${this.idade}, peso: ${this.peso}}`;
+        };
+
+        const aluno = new Aluno("Geovana Goncalves", 23, 70.5);
+
+        console.log("Aluno antes da modificação:");
+        console.log(aluno.toString());
+
+        aluno.nome = "Ronnie Peterson";
+        aluno.idade = 25;
+        aluno.peso = 68.1;
+
+        console.log("Aluno após a modificação:");
+        console.log(aluno.toString());
+    </script>
+</body>
+</html>
